@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Storage} from '@ionic/storage';
 /**
  * Generated class for the HomePage page.
  *
@@ -13,8 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+Name:string;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
 
@@ -26,8 +27,20 @@ export class HomePage {
      this.navCtrl.push("CameraPage")
    }
 
+   openSettings(){
+     this.navCtrl.push("SettingsPage")
+   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+  }
+
+  ionViewWillEnter(){
+    this.storage.get("Name").then((data)=>{
+      this.Name=data;
+    })
+    .catch((err)=>{
+      console.log("Database Retrievel Error")
+    })
   }
 }

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-searchbar 
+    [(ngModel)]="Name" 
+    type="string" 
+    placeholder="Enter First Name">
+  </ion-searchbar>
+<button ion-button full color="danger" (click)="saveName()">Update Name</button>
+</ion-content>

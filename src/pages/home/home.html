@@ -5,8 +5,11 @@
 </ion-header>
 
 <ion-content padding class="bg-image">
+  <h5 align="center" style="color: green">{{Name}}</h5>
+  <h3 align="center" style="color: red">Welcome to UFC-Camera</h3>
     <div style="position: absolute; bottom: 75px; width: 100%">
-        <button ion-button  (click)="openPlayer()" color="secondary" class="button-size">Players</button>
-        <button ion-button color="danger" style="margin-left: 5%;margin-right: 5%"class="button-size" (click)="openCamera()">Camera</button>
+        <button ion-button  (click)="openPlayer()" color="secondary" class="button-size">Fighters</button>
+        <button ion-button color="danger" style="margin-left: 2%;margin-right: 2%"class="button-size" (click)="openCamera()">Camera</button>
+        <button ion-button class="button-size" (click)="openSettings()">Settings</button>
     </div>
 </ion-content>

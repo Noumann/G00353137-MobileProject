@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { PlayerInfoProvider } from '../providers/player-info/player-info';
 import { Camera } from '@ionic-native/camera';
 import { HttpModule } from '@angular/http';
+import {IonicStorageModule} from '@ionic/storage';
 @NgModule({
   declarations: [
     MyApp
@@ -14,7 +15,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
