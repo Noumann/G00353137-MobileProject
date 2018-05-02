@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { PlayerInfoProvider } from '../providers/player-info/player-info';
+import { Camera } from '@ionic-native/camera';
 import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PlayerInfoProvider
+    PlayerInfoProvider,
+    Camera
   ]
 })
 export class AppModule {}

@@ -22,6 +22,11 @@ export class HomePage {
     this.navCtrl.push("PlayersPage")
    }
 
+   openCamera(){
+     this.navCtrl.push("CameraPage")
+   }
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }

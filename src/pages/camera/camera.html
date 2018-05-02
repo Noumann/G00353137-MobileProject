@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1 style="color: red; margin-left: 32%">README..!!!</h1>
+<h2>If you run this using cammand "ionic serve --lab"
+   and run it on Phone using Ionic DevApp 
+   it will open the camera in phone and 
+   take a picture and it will save the picture underneath
+  the button.
+</h2>
+<br>
+<button ion-button (click)="openCamera()" full color="danger">Open Camera</button>
+<br>
+<img [src]="base64Image" *ngIf="base64Image"/>
+</ion-content>
