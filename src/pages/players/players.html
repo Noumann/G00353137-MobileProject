@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>UFC-Players</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="player-image">
+  <ion-searchbar 
+  [(ngModel)]="name" 
+  type="string" 
+  placeholder="Fighter's First Name" 
+  (ionInput)="setFilterdPlayer()">
+</ion-searchbar>
+  <br> <br>
+<ion-list no-lines *ngFor="let p of filterPlayer">
+  <ion-item>
+    <H2 style="margin-left: 27%">Fighter Information</H2>
+    <br>
+    <head>
+        <style>
+        div {
+            width: 295px;
+            padding: 10px;
+            border: 5px solid rgb(33, 89, 138);
+            margin-left: 0%;
+        }
+        </style>
+     </head>
+    <div>
+      <p style="color: black">
+        Fighter ID : {{p.id}}
+        <br> <br>
+        First Name : {{p.first_name}}
+        <br> <br>
+        Last Name : {{p.last_name}}
+        <br> <br>
+        Weight Class : {{p.weight_class}}
+        <br> <br>
+        Wins : {{p.wins}}
+        <br> <br>
+        Losses : {{p.losses}}
+        <br> <br>
+        Draws : {{p.draws}}
+        <br> <br>
+        Stat ID : {{p.statid}}
+        <br> <br>
+        Title Holder : {{p.title_holder}}
+        <br> <br>
+        Rank : {{p.rank}}
+        <br> <br>
+        Fighter Status : {{p.fighter_status}}
+      </p>
+      <br>
+      <a href="{{p.link}}">Click for more Information</a>
+    </div>
+    <br>
+    <img style="margin-left: 10%" width="200" height="500" src="{{p.right_full_body_image}}" /> 
+    <br> <br> <br>  
+  </ion-item>
+</ion-list>
+</ion-content>
