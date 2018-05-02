@@ -5,11 +5,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="bg-image">
     <ion-searchbar 
     [(ngModel)]="Name" 
     type="string" 
     placeholder="Enter First Name">
   </ion-searchbar>
-<button ion-button full color="danger" (click)="saveName()">Update Name</button>
+<button ion-button full color="secondary" (click)="saveName()">Update Name</button>
 </ion-content>
