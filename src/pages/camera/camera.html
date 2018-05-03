@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-
+<!--Adding background picture-->
 <ion-content padding class="bg-image">
   <h1 style="color: red" align="center">README..!!!</h1>
 <h5 style="color: green">If you run this using cammand "ionic serve --lab"
@@ -14,7 +14,9 @@
   the button.
 </h5>
 <br>
+<!--A button that opens camera in the phone and allow taking the picture and save it underneath the button-->
 <button ion-button (click)="openCamera()" full color="danger">Open Camera</button>
 <br>
+<!--displaying the picture-->
 <img [src]="base64Image" *ngIf="base64Image"/>
 </ion-content>

@@ -14,8 +14,9 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'camera.html',
 })
 export class CameraPage {
+  //image variable
   base64Image:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private camera:Camera) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private camera:Camera) {//add ionic native or dependecy injection
   }
 
   ionViewDidLoad() {
@@ -23,6 +24,7 @@ export class CameraPage {
   }
 
   openCamera(){
+    //whenever camera open run this function
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,

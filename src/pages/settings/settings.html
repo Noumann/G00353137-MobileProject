@@ -4,12 +4,14 @@
   </ion-navbar>
 </ion-header>
 
-
+<!--Background images-->
 <ion-content padding class="bg-image">
+  <!--Two way data binding-->
     <ion-searchbar 
     [(ngModel)]="Name" 
     type="string" 
     placeholder="Enter First Name">
   </ion-searchbar>
+  <!--Button to save the name of the user in the storage-->
 <button ion-button full color="secondary" (click)="saveName()">Update Name</button>
 </ion-content>

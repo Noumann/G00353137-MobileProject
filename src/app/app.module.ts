@@ -16,6 +16,7 @@ import {IonicStorageModule} from '@ionic/storage';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    //storage, data persistence
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -26,7 +27,9 @@ import {IonicStorageModule} from '@ionic/storage';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    // Ionic provider 
     PlayerInfoProvider,
+    //Ionic namtive
     Camera
   ]
 })

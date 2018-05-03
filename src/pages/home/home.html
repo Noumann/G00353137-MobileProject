@@ -3,10 +3,16 @@
     <ion-title>UFC-Camera</ion-title>
   </ion-navbar>
 </ion-header>
-
+<!--Background image-->
 <ion-content padding class="bg-image">
+    <!--Taking the user name from a setting page and display it here and save it in the storage-->
   <h4 align="center" style="color: green">{{Name}}</h4>
   <h3 align="center" style="color: red">Welcome to UFC-Camera</h3>
+  <!--Add three buttons 
+    1. To open fighters page
+    2. To open the camera page
+    3. To open the settings page
+    -->
     <div style="position: absolute; bottom: 75px; width: 100%">
         <button ion-button  (click)="openPlayer()" color="secondary" class="button-size">Fighters</button>
         <button ion-button color="danger" style="margin-left: 2%;margin-right: 2%"class="button-size" (click)="openCamera()">Camera</button>

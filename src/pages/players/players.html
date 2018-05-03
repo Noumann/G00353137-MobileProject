@@ -3,8 +3,9 @@
     <ion-title>UFC-Fighters</ion-title>
   </ion-navbar>
 </ion-header>
-
+<!--Background image-->
 <ion-content padding class="player-image">
+  <!--Search bar which helps to searh the fighter from database based on their first name-->
   <ion-searchbar 
   [(ngModel)]="name" 
   type="string" 
@@ -12,6 +13,8 @@
   (ionInput)="setFilterdPlayer()">
 </ion-searchbar>
   <br> <br>
+  <!--For loop in order to iterate over all the fighters in the databses-->
+  <!--Iterate over all the fighters which are in the filterPlayers list-->
 <ion-list no-lines *ngFor="let p of filterPlayer">
   <ion-item>
     <H2 style="margin-left: 27%">Fighter Information</H2>
@@ -26,6 +29,7 @@
         }
         </style>
      </head>
+     <!--Display the information of the player in a div-->
     <div>
       <p style="color: black">
         Fighter ID : {{p.id}}
@@ -54,6 +58,7 @@
       <a href="{{p.link}}">Click for more Information</a>
     </div>
     <br>
+    <!--Display the full body image of the fighter-->
     <img style="margin-left: 20%" width="175" height="500" src="{{p.right_full_body_image}}" /> 
     <br> <br> <br>  
   </ion-item>

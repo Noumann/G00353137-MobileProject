@@ -14,19 +14,21 @@ import {Storage} from '@ionic/storage';
   templateUrl: 'home.html',
 })
 export class HomePage {
+  //variable to store the name from settings page
 Name:string;
+//Dependency injection in order to use the storage
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
-
+//open players page
   openPlayer(){
     this.navCtrl.push("PlayersPage")
    }
-
+//open camera page
    openCamera(){
      this.navCtrl.push("CameraPage")
    }
-
+//open settings page
    openSettings(){
      this.navCtrl.push("SettingsPage")
    }
@@ -34,7 +36,7 @@ Name:string;
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
-
+//get the name from settings page and assings to the local variable
   ionViewWillEnter(){
     this.storage.get("Name").then((data)=>{
       this.Name=data;

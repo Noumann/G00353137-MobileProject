@@ -14,14 +14,17 @@ import {Storage} from '@ionic/storage';
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
+  //name to store the name of teh user
 Name:string;
+//Dependency injection
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
-
+//save the name from the input bar
+//add save it in a variable and close the page
   saveName(){
     console.log(this.Name);
     this.storage.set("Name",this.Name);
